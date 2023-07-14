@@ -1,1 +1,1 @@
-# scouting-dashboard
+# Soccer Scouting Dashboards
