@@ -73,7 +73,8 @@ clean_sc = {
     'm': 'Medium',
     'HT': 'Half Time',
     'FT': 'Full Time',
-    'KO': 'Kick Off'
+    'KO': 'Kick Off',
+    'touch': 'Touch'
 }
 
 df['Subcategory'] = df['Subcategory'].replace(clean_sc)
@@ -88,6 +89,11 @@ clean_result = {
     'c': 'Complete',
     'i': 'Incomplete',
     'goal': 'Goal',
+    'block': 'Block',
+    'save': 'Save',
+    'offside': 'Offside',
+    'lp': 'Dispossessed',
+    'gp': 'Possessed'
     
 }
 
