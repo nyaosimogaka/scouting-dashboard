@@ -62,8 +62,8 @@ df['Category'] = df['Category'].replace(clean_category)
 #Clean SubCategory Column
 clean_sc = {
     'Gr': 'Ground',
-    'Off': 'Off Target',
-    'On': 'On Target',
+    'off': 'Off Target',
+    'on': 'On Target',
     'Tkl': 'Tackle',
     'Int': 'Interception',
     'sh': 'Short',
