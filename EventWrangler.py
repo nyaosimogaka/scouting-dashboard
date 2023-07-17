@@ -1,3 +1,5 @@
+import pandas as pd
+
 # Prompt the user for the filename and provide format instructions
 print("ATTENTION: This python script only processes soccer event data that has been uniquely defined by its writer!")
 print("This script requires Python and Pandas to be installed for it to work.")
