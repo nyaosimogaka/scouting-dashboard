@@ -1,5 +1,3 @@
-import pandas as pd
-
 # Prompt the user for the filename and provide format instructions
 print("ATTENTION: This python script only processes soccer event data that has been uniquely defined by its writer!")
 print("This script requires Python and Pandas to be installed for it to work.")
@@ -27,7 +25,7 @@ df['Date'] = match_date
 
 ##Add Period markers
 # Find the index of the row with 'HT' in the 'Event' column
-ht_index = df[df['Event'] == 'HT'].index[0]
+ht_index = df[df['Event'] == 'NA-HT-NA'].index[0]
 # Create the 'period' column and set all values to 'H2' by default
 df['period'] = 'H2'
 # Update values in 'period' column before and including 'HT' row to 'H1'
@@ -95,10 +93,7 @@ df['Result'] = df['Result'].replace(clean_result)
 
 #Select columns to return
 df = df[['Tournament', 'Date', 'Team', 'Opponent', 'Player', 'Category', 'Subcategory', 'Result', 'period', 'Timestamp', 'X', 'Y', 'X2', 'Y2' ]]
-# Create a list of values to drop
-values_to_drop = ['Half Time', 'Full Time', 'Kick Off']
-# Filter the DataFrame and drop the rows with the specified values
-df = df[~df['Subcategory'].isin(values_to_drop)]
+
 
 # Prompt the user for the filename to save the processed DataFrame as a new CSV file
 output_filename = input("Enter the filename to save the processed DataFrame as a new CSV file: ") + '.csv'
